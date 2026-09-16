@@ -5,6 +5,12 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
   define: {
-    "process.env": {}
+    "process.env": {},
+    global: "window",
+  },
+  resolve: {
+    alias: {
+      buffer: "buffer",
+    }
   }
 });
